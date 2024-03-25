@@ -19,7 +19,7 @@ docker_container_storage_setup: false
 docker_dns_servers_strict: false
 
 # Path used to store Docker data
-docker_daemon_graph: "/var/lib/docker"
+docker_daemon_graph: "/data/docker"
 
 ## Used to set docker daemon iptables options to true
 docker_iptables_enabled: "false"
@@ -38,14 +38,13 @@ docker_rpm_keepcache: 1
 ## An obvious use case is allowing insecure-registry access to self hosted registries.
 ## Can be ipaddress and domain_name.
 ## example define 172.19.16.11 or mirror.registry.io
-# docker_insecure_registries:
-#   - mirror.registry.io
-#   - 172.19.16.11
+docker_insecure_registries:
+  - registry.ops.local
 
 ## Add other registry,example China registry mirror.
-# docker_registry_mirrors:
-#   - https://registry.docker-cn.com
-#   - https://mirror.aliyuncs.com
+docker_registry_mirrors:
+  - https://registry.docker-cn.com
+  - https://mirror.aliyuncs.com
 
 ## If non-empty will override default system MountFlags value.
 ## This option takes a mount propagation flag: shared, slave

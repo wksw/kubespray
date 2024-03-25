@@ -17,9 +17,9 @@ bin_dir: /usr/local/bin
 #   port: 1234
 
 ## Internal loadbalancers for apiservers
-# loadbalancer_apiserver_localhost: true
+loadbalancer_apiserver_localhost: true
 # valid options are "nginx" or "haproxy"
-# loadbalancer_apiserver_type: nginx  # valid values "nginx" or "haproxy"
+loadbalancer_apiserver_type: nginx 
 
 ## Local loadbalancer should use this port
 ## And must be set port 6443
@@ -83,20 +83,20 @@ no_proxy_exclude_workers: false
 ## This setting determines whether certs are generated via scripts.
 ## Chose 'none' if you provide your own certificates.
 ## Option is  "script", "none"
-# cert_management: script
+cert_management: script
 
 ## Set to true to allow pre-checks to fail and continue deployment
-# ignore_assert_errors: false
+ignore_assert_errors: false
 
 ## The read-only port for the Kubelet to serve on with no authentication/authorization. Uncomment to enable.
 # kube_read_only_port: 10255
 
 ## Set true to download and cache container
-# download_container: true
+download_container: true
 
 ## Deploy container engine
 # Set false if you want to deploy container engine manually.
-# deploy_container_engine: true
+deploy_container_engine: true
 
 ## Red Hat Enterprise Linux subscription registration
 ## Add either RHEL subscription Username/Password or Organization ID/Activation Key combination
@@ -124,8 +124,8 @@ kube_webhook_token_auth_url_skip_tls_verify: false
 
 ## NTP Settings
 # Start the ntpd or chrony service and enable it at system boot.
-ntp_enabled: false
-ntp_manage_config: false
+ntp_enabled: true
+ntp_manage_config: true
 ntp_servers:
   - "0.pool.ntp.org iburst"
   - "1.pool.ntp.org iburst"
