@@ -1,0 +1,4 @@
+[submodule "3d/kubespray"]
+	path = 3d/kubespray
+	url = git@github.com:kubernetes-sigs/kubespray.git
+	tag = v1.24.1
