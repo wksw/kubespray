@@ -25,10 +25,7 @@ vagrant/
 plugins/mitogen
 
 # Ansible inventory
-inventory/*
-!inventory/local
-!inventory/sample
-inventory/*/artifacts/
+inventory/inventory.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

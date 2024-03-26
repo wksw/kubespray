@@ -1,3 +1,3 @@
 ---
 - name: Upgrade cluster
-  ansible.builtin.import_playbook: playbooks/upgrade_cluster.yml
+  ansible.builtin.import_playbook: 3d/kubespray/playbooks/upgrade_cluster.yml
